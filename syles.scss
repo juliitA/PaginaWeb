@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    }
+    
+    .container {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+
+        &-left {
+            width: 30%;
+            background-color: greenyellow;
+            padding: 1rem;
+        }
+
+        &-right {
+            width: 100%;
+            background-color: plum;
+            padding: 1rem;;
+        }
+
+    }
+
+    @media (min-width: 769px) {
+        .container {
+            flex-direction: row;
+        }
+        .menu-item {
+            flex-direction: row;
+        }
+    } 
+    
+    
+    /*menu*/
+    
+    .menu-item {
+        display: block;
+        margin-bottom: 1rem;
+        background-color: plum;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .img-principal {
+        width: 80%;
+        height: 90%;
+    }
+    
+    /* seccion bio */
+    .img-bio {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .text-bio {
+        text-align: center;
+        font-style: italic;
+        line-height: 2;
+    }
+    
+    .bolded {
+        font-weight: bold;
+    }
+    
+    /* seccion contacto */
+    
+    h2 {
+        margin-top: 0;
+    }
+    
+    .form-control {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .form-button {
+        display: block;
+    }
+    
+    .error {
+        color:red;
+        display: none;
+    }
+    
+    .show-error {
+        display: block;
+    }
+    
+    .ok {
+        color: green;
+        display: none;
+    }
+    
+    .show-ok {
+        display: block;
+    }
+    
+    /*User*/
+    
+    #get-user {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .user {
+        text-align:center;
+        margin: 30px;
+    }
+    
+    .mrx-img {
+        display: block;
+        margin-bottom: 3px;
+    }
+    
+    .user-error {
+        color:red;
+        display: none;
+    }
+    
+    .show-user-error {
+        display: block;
+    }
+    
+    .user-img {
+        display: none;
+    }
+    
+    .change-user-img {
+        width: 10%;
+        height: 10%;
+    }
+    .show-user-img {
+        display: flex;
+    }

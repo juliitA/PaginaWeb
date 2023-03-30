@@ -1,7 +1,8 @@
 
 window.addEventListener('load', () => {
+    /*Formulario */
     const submitButton = document.querySelector('#submit');
-    submitButton.addEventListener('click', (event)=>{
+    submitButton?.addEventListener('click', (event)=>{
         event.preventDefault();
         alert('Click en enviar');
 
@@ -24,6 +25,27 @@ window.addEventListener('load', () => {
             document.querySelector('#error').classList.add('show-error')
         }
     });
+
+    /*User */
+    document.querySelector('#get-user').addEventListener('click', getUser);
+
 });
 
+function getUser() {
+    fetch('https://randomuser.me/api/')
+        .then((data) => {
+            return data.json();
+        })
+        .then((response) => {
+            const userData = response.results[0].name; 
+            document.querySelector('#user-name').innerHTML = `${userData.title} ${userData.first} ${userData.last}`;
+            document.querySelector('#user-img').classList.add('show-user-img')
+        })
 
+        .catch((error) => {
+            document.querySelector('#user-error').classList.add('show-user-error')
+        })
+            
+        
+        
+}

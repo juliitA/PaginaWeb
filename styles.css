@@ -6,28 +6,45 @@ padding: 0;
 .container {
     display: flex;
     height: 100vh;
+    flex-direction: column;
 }
+
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row;
+    }
+    .container-left {
+        width: 20%;
+    }
+    .container-right {
+        border-left-style: solid;
+        border-left-color: black;          
+        border-left-width: 3px;
+    }
+    .menu-item {
+        flex-direction: row;
+    }
+} 
+
 .container-left {
-    width: 20%;
+    width: 100%;
     background-color: greenyellow;
     padding: 1rem;
 }
 .container-right {
     width: 100%;
     background-color: plum;
-    padding: 1rem;
-    border-left-style: solid;
-    border-left-color: black;
-    border-left-width: 3px;
+    padding: 1rem;;
 }
 
 /*menu*/
 
 .menu-item {
-    display: block;
-    margin-bottom: 1rem;
+    padding: 15px;
+    margin-right: 20px;
     background-color: plum;
     text-align: center;
+    flex-direction: column;
 }
 
 .img-principal {
@@ -82,4 +99,42 @@ h2 {
 
 .show-ok {
     display: block;
+}
+
+/*User*/
+
+#get-user {
+    display: block;
+    margin: 0 auto;
+}
+
+.user {
+    text-align:center;
+    margin: 30px;
+}
+
+.mrx-img {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.user-error {
+    color:red;
+    display: none;
+}
+
+.show-user-error {
+    display: block;
+}
+
+.user-img {
+    display: none;
+}
+
+.change-user-img {
+    width: 10%;
+    height: 10%;
+}
+.show-user-img {
+    display: flex;
 }
