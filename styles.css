@@ -9,27 +9,24 @@ padding: 0;
 }
 .container-left {
     width: 20%;
-    background-color: white;
+    background-color: greenyellow;
     padding: 1rem;
 }
 .container-right {
     width: 100%;
-    background-color: pink;
+    background-color: plum;
     padding: 1rem;
     border-left-style: solid;
     border-left-color: black;
     border-left-width: 3px;
 }
 
-.menu {
-
-}
+/*menu*/
 
 .menu-item {
     display: block;
     margin-bottom: 1rem;
-    background-color: aquamarine;
-    border: 1px solid;
+    background-color: plum;
     text-align: center;
 }
 
@@ -45,9 +42,13 @@ padding: 0;
 }
 
 .text-bio {
-    text-align: justify;
+    text-align: center;
     font-style: italic;
     line-height: 2;
+}
+
+.bolded {
+    font-weight: bold;
 }
 
 /* seccion contacto */
@@ -59,4 +60,26 @@ h2 {
 .form-control {
     display: block;
     margin: 0.5rem 0;
+}
+
+.form-button {
+    display: block;
+}
+
+.error {
+    color:red;
+    display: none;
+}
+
+.show-error {
+    display: block;
+}
+
+.ok {
+    color: green;
+    display: none;
+}
+
+.show-ok {
+    display: block;
 }
